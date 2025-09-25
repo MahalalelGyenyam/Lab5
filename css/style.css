@@ -21,6 +21,7 @@ body {
 h1, h2, h3 {
   font-family: 'Sonsie One', cursive;
   color: #2a2a2a;
+  
 }
 
 p, input, li, table, label {
@@ -28,19 +29,19 @@ p, input, li, table, label {
   color: #2a2a2a;
 }
 
-font[size="7"] {
+h1 {
   font-size: 4rem;
   text-align: center;
   color: white;
   text-shadow: 2px 2px 10px black;
 }
 
-font[size="6"] {
+h2 {
   font-size: 3rem;
   text-align: center;
 }
 
-font[size="5"] {
+h3 {
   font-size: 2.2rem;
 }
 
@@ -51,8 +52,8 @@ p, li, table {
 
 /* || header layout */
 
-div[class="nav"], article, footer, .secondary {
-  background-color: green;
+nav, article, footer, .secondary {
+  background-color: white;
 }
 
 article, footer, .secondary {
@@ -63,7 +64,7 @@ article {
   margin-right: 10px;
 }
 
-div[class="nav"] {
+nav {
   height: 50px;
   background-color: ff80ff;
   display: flex;
@@ -71,20 +72,20 @@ div[class="nav"] {
   margin-bottom: 10px;
 }
 
-div[class="nav"] ul {
+nav ul {
   padding: 0;
   list-style-type: none;
   flex: 2;
   display: flex;
 }
 
-div[class="nav"] li {
+nav li {
   display: inline;
   text-align: center;
   flex: 1;
 }
 
-div[class="nav"] a {
+nav a {
   display: inline-block;
   font-size: 2rem;
   text-transform: uppercase;
@@ -92,7 +93,7 @@ div[class="nav"] a {
   color: black;
 }
 
-div[class="nav"] .search {
+nav .search {
   flex: 1;
   display: flex;
   align-items: center;
@@ -116,6 +117,17 @@ div[class="nav"] .search {
   border: 0;
   color: white;
 }
+
+.screen_reader{
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  padding: 0;
+
+  overflow: hidden;
+
+}
+
 
 /* || main layout */
 
@@ -153,6 +165,12 @@ td {
 
 th[scope="col"] {
   border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+th[scope="row"] {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 tbody tr:nth-child(odd) {
@@ -181,11 +199,11 @@ audio {
   cursor: pointer;
 }
 
-.comments font[size="6"] {
+.comments h2 {
   font-size: 2rem;
 }
 
-.comments font[size="6"]:nth-of-type(2) {
+.comments h2:nth-of-type(2) {
   margin-bottom: 0;
 }
 
@@ -198,10 +216,21 @@ audio {
   padding: 0 3rem 1rem;
 }
 
+.flex-pair lable{
+  align-self: center;
+  flex: 2;
+  text-align: right;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #2a2a2a;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
 .comment-form label {
   align-self: center;
   flex: 2;
   text-align: right;
+  
 }
 
 .comment-form input {
@@ -212,6 +241,9 @@ audio {
 .show-hide {
   text-align: center;
   width: 150px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 
 .comment-form input, .comment-form label, .show-hide {
